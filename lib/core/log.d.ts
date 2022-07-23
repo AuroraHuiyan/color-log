@@ -1,2 +1,2 @@
-import { Result, Callback } from "./types.js";
-export default function (t: string, cb?: Callback): Result;
+import { Result, Callback } from "./types";
+export default function (t?: any, cb?: Callback): Result;

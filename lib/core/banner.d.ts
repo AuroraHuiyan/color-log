@@ -1,3 +1,3 @@
-import { Color } from '../config.js';
-import { Result, Callback } from './types.js';
-export default function (t: string, color: Color, cb?: Callback): Result;
+import { Color } from '../config';
+import { Result, Callback } from './types';
+export default function (t: any, color: Color, cb?: Callback): Result;

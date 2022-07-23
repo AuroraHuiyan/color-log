@@ -1,10 +1,10 @@
-import config from '../config.js';
-import { Type } from '../config.js';
-import { Result, Callback } from './types.js';
+import config from '../config';
+import { Type } from '../config';
+import { Result, Callback } from './types';
 
 const values = config.type;
 
-export default function(t: string, type: Type, cb?: Callback): Result {
+export default function(t: any = '', type: Type, cb?: Callback): Result {
     const ty = values[type] ?? config.reset;
     process.stdout.write(ty);
     console.log(t);

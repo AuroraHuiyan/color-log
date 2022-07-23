@@ -1,9 +1,9 @@
-import config from '../config.js';
-import { Result, Callback } from './types.js';
+import config from '../config';
+import { Result, Callback } from './types';
 
 const values = config.color;
 
-export default function(t: string, cb?: Callback): Result {
+export default function(t: any = '', cb?: Callback): Result {
     process.stdout.write(values.yellow);
     console.log(t);
     process.stdout.write(config.reset);

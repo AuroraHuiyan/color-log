@@ -1,11 +1,13 @@
-import log from './core/log.js';
-import info from './core/info.js';
-import success from './core/success.js';
-import warn from './core/warn.js';
-import error from './core/error.js';
-import banner from './core/banner.js';
-import text from './core/text.js';
-declare const _default: {
+import log from './core/log';
+import info from './core/info';
+import success from './core/success';
+import warn from './core/warn';
+import error from './core/error';
+import banner from './core/banner';
+import text from './core/text';
+export { Color, Bgc, Type } from './config';
+export { Result, Callback } from './core/types';
+export declare const colorlog: {
     log: typeof log;
     info: typeof info;
     success: typeof success;
@@ -13,5 +15,5 @@ declare const _default: {
     error: typeof error;
     banner: typeof banner;
     text: typeof text;
+    test: () => void;
 };
-export = _default;

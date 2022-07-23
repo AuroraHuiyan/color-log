@@ -22,7 +22,7 @@
 基本的用法如下：
 
 ```js
-const colorlog  = require('@huiyan/color-log');
+const { colorlog }  = require('@huiyan/color-log');
 
 colorlog.log('This is the log print.');
 colorlog.info('This is the info print.');
@@ -45,4 +45,12 @@ export type Result = {
 };
 
 export type Callback = (options: Result) => unknown;
+```
+
+你也可以通过调用测试函数来预览打印效果。
+
+```js
+const { colorlog }  = require('@huiyan/color-log');
+
+colorlog.test();
 ```

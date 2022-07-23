@@ -22,7 +22,7 @@ It works as console.log logger and process.stdout logger, so make sure you can u
 The basic usage is as follows:
 
 ```js
-const colorlog  = require('@huiyan/color-log');
+const { colorlog }  = require('@huiyan/color-log');
 
 colorlog.log('This is the log print.');
 colorlog.info('This is the info print.');
@@ -45,4 +45,12 @@ export type Result = {
 };
 
 export type Callback = (options: Result) => unknown;
+```
+
+You can also preview the printing effect by using the test function.
+
+```js
+const { colorlog }  = require('@huiyan/color-log');
+
+colorlog.test();
 ```
