@@ -1,10 +1,10 @@
-import log from './core/log';
-import info from './core/info';
-import success from './core/success';
-import warn from './core/warn';
-import error from './core/error';
-import banner from './core/banner';
-import text from './core/text';
+import { log } from './core/log';
+import { info } from './core/info';
+import { success } from './core/success';
+import { warn } from './core/warn';
+import { error } from './core/error';
+import { banner } from './core/banner';
+import { text } from './core/text';
 
 const test = (): void => {
     log('This is the log print.');
@@ -16,8 +16,8 @@ const test = (): void => {
     text('This is the text print.', 'underscore');
 };
 
-export {Color, Bgc, Type} from './config';
-export {Result, Callback} from './core/types';
+export { Color, Bgc, Type } from './config';
+export { Result, Callback } from './core/types';
 export const colorlog = {
     log,
     info,

@@ -1,6 +1,6 @@
 {
     "name": "@huiyan/color-log",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "A tool that provides color and style printing.",
     "main": "lib/index.js",
     "scripts": {

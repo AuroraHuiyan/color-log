@@ -1,12 +1,10 @@
-import config from '../config';
+import { color as values, reset } from '../config';
 import { Result, Callback } from './types';
 
-const values = config.color;
-
-export default function(t: any = '', cb?: Callback): Result {
+export const error = (t: any = '', cb?: Callback): Result => {
     process.stdout.write(values.red);
     console.log(t);
-    process.stdout.write(config.reset);
+    process.stdout.write(reset);
     const res = {
         content: t,
         type: 'error',
@@ -14,4 +12,4 @@ export default function(t: any = '', cb?: Callback): Result {
     };
     cb && cb(res);
     return res;
-}
+};

@@ -1,14 +1,12 @@
-import config from '../config';
+import { type as values, reset } from '../config';
 import { Type } from '../config';
 import { Result, Callback } from './types';
 
-const values = config.type;
-
-export default function(t: any = '', type: Type, cb?: Callback): Result {
-    const ty = values[type] ?? config.reset;
+export const text = (t: any = '', type: Type, cb?: Callback): Result => {
+    const ty = values[type] ?? reset;
     process.stdout.write(ty);
     console.log(t);
-    process.stdout.write(config.reset);
+    process.stdout.write(reset);
     const res = {
         content: t,
         type: 'text',
