@@ -1,3 +1,3 @@
-import { Color } from '../config';
-import { Result, Callback } from './types';
-export default function (t: any, color: Color, cb?: Callback): Result;
+import type { Color } from '../config';
+import type { Result, Callback } from './types';
+export declare const banner: (t: any, color: Color, cb?: Callback | undefined) => Result;

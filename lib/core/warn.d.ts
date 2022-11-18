@@ -1,2 +1,2 @@
 import { Result, Callback } from './types';
-export default function (t?: any, cb?: Callback): Result;
+export declare const warn: (t?: any, cb?: Callback | undefined) => Result;

@@ -1,19 +1,12 @@
-import log from './core/log';
-import info from './core/info';
-import success from './core/success';
-import warn from './core/warn';
-import error from './core/error';
-import banner from './core/banner';
-import text from './core/text';
 export { Color, Bgc, Type } from './config';
 export { Result, Callback } from './core/types';
 export declare const colorlog: {
-    log: typeof log;
-    info: typeof info;
-    success: typeof success;
-    warn: typeof warn;
-    error: typeof error;
-    banner: typeof banner;
-    text: typeof text;
+    log: (t?: any, cb?: import("./core/types").Callback | undefined) => import("./core/types").Result;
+    info: (t?: any, cb?: import("./core/types").Callback | undefined) => import("./core/types").Result;
+    success: (t?: any, cb?: import("./core/types").Callback | undefined) => import("./core/types").Result;
+    warn: (t?: any, cb?: import("./core/types").Callback | undefined) => import("./core/types").Result;
+    error: (t?: any, cb?: import("./core/types").Callback | undefined) => import("./core/types").Result;
+    banner: (t: any, color: import("./config").Color, cb?: import("./core/types").Callback | undefined) => import("./core/types").Result;
+    text: (t: any, type: import("./config").Type, cb?: import("./core/types").Callback | undefined) => import("./core/types").Result;
     test: () => void;
 };
