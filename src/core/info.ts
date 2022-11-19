@@ -2,12 +2,10 @@ import { color as values, reset } from '../config';
 import { Result, Callback } from "./types";
 
 export const info = (t: any = '', cb?: Callback): Result => {
-    process.stdout.write(values.blue);
-    console.log(t);
-    process.stdout.write(reset);
-    const res = {
-        content: t,
+    console.log(values.blue + t + reset);
+    const res: Result = {
         type: 'info',
+        content: t,
         value: 'blue'
     };
     cb && cb(res);

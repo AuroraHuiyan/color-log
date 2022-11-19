@@ -5,6 +5,7 @@ import { warn } from './core/warn';
 import { error } from './core/error';
 import { banner } from './core/banner';
 import { text } from './core/text';
+import { clear } from './core/clear';
 
 const test = (): void => {
     log('This is the log print.');
@@ -13,11 +14,12 @@ const test = (): void => {
     warn('This is the warn print.');
     error('This is the error print.');
     banner('This is the banner print.', 'red');
-    text('This is the text print.', 'underscore');
+    text('This is the text print.', ['underline', 'bright']);
 };
 
 export { Color, Bgc, Type } from './config';
 export { Result, Callback } from './core/types';
+export { logEx } from './utils/logEx';
 export const colorlog = {
     log,
     info,
@@ -26,5 +28,6 @@ export const colorlog = {
     error,
     banner,
     text,
+    clear,
     test
 };

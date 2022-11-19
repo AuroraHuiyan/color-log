@@ -2,7 +2,7 @@ export type Color = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 
 
 export type Bgc = 'bgBlack' | 'bgRed' | 'bgGreen' | 'bgYellow' | 'bgBlue' | 'bgMagenta' | 'bgCyan' | 'bgWhite';
 
-export type Type = 'bright' | 'dim' | 'underscore' | 'blink' | 'reverse' | 'hidden';
+export type Type = 'bright' | 'dim' | 'italic' | 'underline' | 'blink' | 'reverse' | 'hidden' | 'strikethrough';
 
 const color = {
     black: '\x1b[30m',
@@ -27,10 +27,12 @@ const bgc = {
 const type = {
     bright: '\x1b[1m',
     dim: '\x1b[2m',
-    underscore: '\x1b[4m',
+    italic: '\x1b[3m',
+    underline: '\x1b[4m',
     blink: '\x1b[5m',
     reverse: '\x1b[7m',
-    hidden: '\x1b[8m'
+    hidden: '\x1b[8m',
+    strikethrough: '\x1b[9m'
 };
 const reset = '\x1b[0m';
 
